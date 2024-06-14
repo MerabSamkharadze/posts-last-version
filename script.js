@@ -16,3 +16,11 @@ function ajaxFncPosts(url, callback) {
       posts_container.appendChild(h1);
     });
 }
+
+ajaxFncPosts("https://jsonplaceholder.typicode.com/posts", createPostsContent);
+function createPostsContent(data) {
+  data.forEach((element) => {
+    createDivPosts(element);
+  });
+}
+function createDivPosts(element) {}
