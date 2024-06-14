@@ -5,13 +5,25 @@
   justify-content: center;
 }
 .posts_container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   width: 90%;
 }
 .post {
   padding: 10px 20px;
-  width: 100%;
+  margin: 10px 10px;
+  width: 90%;
   height: auto;
+  background-color: rgb(82, 202, 90);
+}
+.post button {
+  border: tomato;
+  background-color: tomato;
+  color: #fff;
+  width: 100px;
+  height: 30px;
+  font-size: 20px;
+  margin-left: 90%;
+  cursor: pointer;
+}
+.post button:hover {
+  background-color: rgba(216, 133, 119, 0.509);
 }

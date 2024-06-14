@@ -23,4 +23,20 @@ function createPostsContent(data) {
     createDivPosts(element);
   });
 }
-function createDivPosts(element) {}
+function createDivPosts(element) {
+  console.log(element);
+  const divPost = document.createElement("div");
+  divPost.classList.add("post");
+  divPost.setAttribute("id", element.id);
+
+  const title = document.createElement("h2");
+  title.textContent = element.title;
+
+  const deleteBtn = document.createElement("button");
+  deleteBtn.textContent = "Delete";
+  deleteBtn.setAttribute("delete_id", element.id);
+
+  divPost.appendChild(title);
+  divPost.appendChild(deleteBtn);
+  posts_container.appendChild(divPost);
+}
