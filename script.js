@@ -42,11 +42,14 @@ function createDivPosts(element) {
   divPost.appendChild(title);
   divPost.appendChild(deleteBtn);
 
-  divPost.addEventListener("click", function () {
+  divPost.addEventListener("click", function (e) {
     overlay.classList.add("active");
     let divId = this.getAttribute("id");
-    console.log(this);
     let link = `https://jsonplaceholder.typicode.com/posts/${divId}`;
+  });
+
+  deleteBtn.addEventListener("click", function (e) {
+    e.stopPropagation();
   });
   posts_container.appendChild(divPost);
 }
