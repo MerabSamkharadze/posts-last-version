@@ -1,5 +1,7 @@
 "use strict ";
 const posts_container = document.querySelector(".posts_container");
+const overlay_title = document.getElementById("overlay_title");
+const overlay_body = document.getElementById("overlay_body");
 
 function ajaxFncPosts(url, callback) {
   fetch(url, { method: "GET" })
