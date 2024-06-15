@@ -41,15 +41,22 @@ function createDivPosts(element) {
 
   divPost.appendChild(title);
   divPost.appendChild(deleteBtn);
+
+  divPost.addEventListener("click", function () {
+    overlay.classList.add("active");
+    let divId = this.getAttribute("id");
+    console.log(this);
+    let link = `https://jsonplaceholder.typicode.com/posts/${divId}`;
+  });
   posts_container.appendChild(divPost);
 }
 
 close_overlay.addEventListener("click", () => {
-  overlay.style.display = "none";
+  overlay.classList.remove("active");
 });
 overlay.addEventListener("click", function (e) {
   if (e.target === this) {
-    overlay.style.display = "none";
+    overlay.classList.remove("active");
   }
 });
 
