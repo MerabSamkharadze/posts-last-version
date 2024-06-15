@@ -11,7 +11,7 @@
 .post {
   padding: 10px 20px;
   margin: 10px 10px;
-  width: 90%;
+  width: 100%;
   height: auto;
   background-color: rgb(82, 202, 90);
 }
@@ -55,4 +55,10 @@
 }
 .overlay_postContent p {
   font-size: 30px;
+}
+#close_overlay {
+  position: absolute;
+  width: 30px;
+  right: 20px;
+  cursor: pointer;
 }

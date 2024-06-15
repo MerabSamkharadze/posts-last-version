@@ -1,7 +1,9 @@
 "use strict ";
 const posts_container = document.querySelector(".posts_container");
+const overlay = document.querySelector(".overlay");
 const overlay_title = document.getElementById("overlay_title");
 const overlay_body = document.getElementById("overlay_body");
+const close_overlay = document.getElementById("close_overlay");
 
 function ajaxFncPosts(url, callback) {
   fetch(url, { method: "GET" })
@@ -26,7 +28,6 @@ function createPostsContent(data) {
   });
 }
 function createDivPosts(element) {
-  console.log(element);
   const divPost = document.createElement("div");
   divPost.classList.add("post");
   divPost.setAttribute("id", element.id);
@@ -42,3 +43,14 @@ function createDivPosts(element) {
   divPost.appendChild(deleteBtn);
   posts_container.appendChild(divPost);
 }
+
+close_overlay.addEventListener("click", () => {
+  overlay.style.display = "none";
+});
+overlay.addEventListener("click", function (e) {
+  if (e.target === this) {
+    overlay.style.display = "none";
+  }
+});
+
+//e.stopPropagation();
