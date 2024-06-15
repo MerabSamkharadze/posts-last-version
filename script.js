@@ -46,21 +46,33 @@ function createDivPosts(element) {
     overlay.classList.add("active");
     let divId = this.getAttribute("id");
     let link = `https://jsonplaceholder.typicode.com/posts/${divId}`;
+    ajaxFncPosts(link, function (data) {
+      overlay_title.textContent = data.title;
+      overlay_body.textContent = data.body;
+    });
   });
 
   deleteBtn.addEventListener("click", function (e) {
     e.stopPropagation();
+    deleteBtn.classList.add("disabled");
+    let id = this.getAttribute("delete_id");
+    let link = `https://jsonplaceholder.typicode.com/posts/${id}`;
+    fetch(link, {
+      method: "DELETE",
+    }).then(() => divPost.remove());
   });
   posts_container.appendChild(divPost);
 }
 
 close_overlay.addEventListener("click", () => {
   overlay.classList.remove("active");
+  overlay_title.textContent = "";
+  overlay_body.textContent = "";
 });
 overlay.addEventListener("click", function (e) {
   if (e.target === this) {
     overlay.classList.remove("active");
+    overlay_title.textContent = "";
+    overlay_body.textContent = "";
   }
 });
-
-//e.stopPropagation();

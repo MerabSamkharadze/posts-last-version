@@ -73,3 +73,6 @@
 #close_overlay:hover {
   width: 35px;
 }
+/* .disabled {
+  pointer-events: none;
+} */
