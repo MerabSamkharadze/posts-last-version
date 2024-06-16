@@ -83,7 +83,23 @@ overlay.addEventListener("click", function (e) {
 
 submit_post.addEventListener("submit", function (e) {
   e.preventDefault();
-  add_post.classList.remove("active");
+  let formData = {
+    title: this[0].value,
+    userId: 11,
+  };
+  fetch("https://jsonplaceholder.typicode.com/posts", {
+    method: "POST",
+    body: JSON.stringify(formData),
+    headers: {
+      "Content-type": "application/json; charset=UTF-8",
+    },
+  })
+    .then((response) => response.json())
+    .then((newObj) => {
+      add_post.classList.remove("active");
+      this[0].value = " ";
+      createDivPosts(newObj);
+    });
 });
 
 addIcon.addEventListener("click", () => {
