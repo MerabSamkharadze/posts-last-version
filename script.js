@@ -4,6 +4,8 @@ const overlay = document.querySelector(".overlay");
 const overlay_title = document.getElementById("overlay_title");
 const overlay_body = document.getElementById("overlay_body");
 const close_overlay = document.getElementById("close_overlay");
+const add_post = document.querySelector(".add_post");
+const addIcon = document.getElementById("addIcon");
 
 function ajaxFncPosts(url, callback) {
   fetch(url, { method: "GET" })
@@ -75,4 +77,7 @@ overlay.addEventListener("click", function (e) {
     overlay_title.textContent = "";
     overlay_body.textContent = "";
   }
+});
+addIcon.addEventListener("click", () => {
+  add_post.classList.add("active");
 });
