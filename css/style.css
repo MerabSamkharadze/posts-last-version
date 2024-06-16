@@ -82,12 +82,18 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  border-radius: 30px;
   z-index: 999;
   display: none;
 }
 .add_post.active {
   display: block;
+}
+.add_post img {
+  position: fixed;
+  width: 70px;
+  right: 20px;
+  top: 20px;
+  cursor: pointer;
 }
 #form-add-post {
   width: 100%;
