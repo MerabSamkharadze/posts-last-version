@@ -7,6 +7,8 @@ const close_overlay = document.getElementById("close_overlay");
 const add_post = document.querySelector(".add_post");
 const addIcon = document.getElementById("addIcon");
 const close_addpost = document.getElementById("close_addpost");
+const submit_post = document.getElementById("form-add-post");
+
 function ajaxFncPosts(url, callback) {
   fetch(url, { method: "GET" })
     .then((responseInfo) => {
@@ -78,6 +80,12 @@ overlay.addEventListener("click", function (e) {
     overlay_body.textContent = "";
   }
 });
+
+submit_post.addEventListener("submit", function (e) {
+  e.preventDefault();
+  add_post.classList.remove("active");
+});
+
 addIcon.addEventListener("click", () => {
   add_post.classList.add("active");
 });
