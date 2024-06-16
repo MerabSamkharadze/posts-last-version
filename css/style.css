@@ -73,6 +73,49 @@
 #close_overlay:hover {
   width: 35px;
 }
-/* .disabled {
-  pointer-events: none;
-} */
+.add_post {
+  position: fixed;
+  top: 40px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(237, 175, 134, 0.782);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 30px;
+  z-index: 999;
+}
+#form-add-post {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#form-add-post button {
+  border: yellowgreen;
+  background-color: rgb(13, 146, 102);
+  border-radius: 10px;
+  width: 200px;
+  height: 20%;
+  font-size: 25px;
+  cursor: pointer;
+  color: #fff;
+}
+#form-add-post button:hover {
+  background-color: rgb(31, 184, 133);
+}
+#posttitle {
+  width: 50%;
+  height: 20%;
+  border: thistle;
+  border-radius: 10px;
+  font-size: 30px;
+  text-align: center;
+}
+#posttitle:focus::placeholder {
+  color: transparent;
+}
+#posttitle:focus {
+  outline: none;
+}
