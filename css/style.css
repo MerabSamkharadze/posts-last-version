@@ -6,12 +6,12 @@
   background-color: rgb(230, 218, 163);
 }
 .posts_container {
-  width: 90%;
+  width: 100%;
 }
 .post {
   padding: 10px 20px;
   margin: 10px 10px;
-  width: 100%;
+  width: 90%;
   height: auto;
   background-color: rgb(82, 202, 90);
   cursor: pointer;
@@ -166,4 +166,7 @@
   .overlay_postContent p {
     font-size: 14px;
   }
+}
+body {
+  min-width: 450px;
 }
