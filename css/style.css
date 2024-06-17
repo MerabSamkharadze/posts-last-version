@@ -142,3 +142,28 @@
 #addIcon:hover {
   width: 120px;
 }
+
+@media only screen and (max-width: 800px) {
+  .overlay_postContent h2 {
+    font-size: 30px;
+  }
+  .overlay_postContent p {
+    font-size: 25px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .overlay_postContent h2 {
+    font-size: 22px;
+  }
+  .overlay_postContent p {
+    font-size: 18px;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .overlay_postContent h2 {
+    font-size: 18px;
+  }
+  .overlay_postContent p {
+    font-size: 14px;
+  }
+}
