@@ -83,6 +83,9 @@ overlay.addEventListener("click", function (e) {
 
 submit_post.addEventListener("submit", function (e) {
   e.preventDefault();
+  if (this[0].value === "") {
+    return;
+  }
   let formData = {
     title: this[0].value,
     userId: 11,
